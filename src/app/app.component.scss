@@ -1,0 +1,8 @@
+body {
+  display: flex;
+  justify-content: center; /* จัดตำแหน่งตามแนวแกน x (แนวนอน) */
+  align-items: center; /* จัดตำแหน่งตามแนวแกน y (แนวตั้ง) */
+  height: 100vh; /* ความสูงของหน้าจอทั้งหมด */
+  margin: 0; /* เอาการระบุขอบของ body ออก */
+  background-color: #f0f0f0; /* สีพื้นหลัง */
+}

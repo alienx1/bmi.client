@@ -1,0 +1,27 @@
+<div class="card col-12" >
+  <div class="card-header">
+    Bmi Calculator
+  </div>
+  <div class="card-body ">
+    <div class="col-12 ">
+    <label for="Kg" class="form-label">น้ำหนักตัว (kg.)</label>
+    <input type="number" class="form-control" id="Kg" [(ngModel)]="kg" >
+    <br>
+    <label for="CM" class="form-label">ส่วนสูง (cm.)</label>
+    <input type="number" class="form-control" id="CM" [(ngModel)]="cm">
+    <br>
+    <button type="button" class="btn btn-primary" (click)="calculate()">คำนวณ</button>
+    <br>
+    <br>
+    <div class="card text-center">
+      <div class="card-body">
+        <h5 class="card-title">BMI</h5>
+        <h4 class="card-title" style="color: rgb(102, 104, 105);">{{ bmi }}</h4>
+        <h4 class="card-title" style="color: rgb(102, 104, 105);">{{ description }}</h4>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+  <app-table (check)="check"></app-table>
