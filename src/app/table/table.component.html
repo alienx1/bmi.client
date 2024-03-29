@@ -2,19 +2,23 @@
   <table class="table table-striped table-hover">
     <thead>
       <tr>
-        <th scope="col">น้ำหนักตัว (kg.)</th>
-        <th scope="col">ส่วนสูง (cm.)</th>
-        <th scope="col">BMI</th>
-        <th scope="col">คำอธิบาย</th>
+        <th scope="col" style="text-align: center;">น้ำหนักตัว (kg.)</th>
+        <th scope="col" style="text-align: center;">ส่วนสูง (cm.)</th>
+        <th scope="col" style="text-align: center;">BMI</th>
+        <th scope="col" style="text-align: center;">คำอธิบาย</th>
       </tr>
     </thead>
-    <tbody>
-
+    <tbody *ngIf="data != null" >
       <tr *ngFor="let item of data">
-        <td>{{item.kg}}</td>
-        <td>{{item.m}}</td>
-        <td>{{item.bmi}}</td>
-        <td>{{item.description}}</td>
+        <td style="text-align: center;">{{item.kg}}</td>
+        <td style="text-align: center;">{{item.m * 100}}</td>
+        <td style="text-align: center;">{{item.bmi}}</td>
+        <td style="text-align: center;">{{item.description}}</td>
+      </tr>
+    </tbody>
+    <tbody *ngIf="data == null">
+      <tr >
+        <td colspan="4" style="text-align: center;">ไม่มีประวัติ</td>
       </tr>
     </tbody>
   </table>

@@ -22,7 +22,7 @@ export class CardComponent {
     this.service.calculatorBmi(data).subscribe(response => {
       this.bmi = response.data.bmi
       this.description = response.data.description
-      console.log(response);
+
     })
     this.check = true;
   }
