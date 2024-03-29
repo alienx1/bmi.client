@@ -9,27 +9,14 @@ import { Location } from '@angular/common';
 })
 export class TableComponent implements OnInit{
   constructor(private service:TableService, private cdr: ChangeDetectorRef, private location: Location){}
-  @Input() check:boolean  = false
-  data:any;
+  data:any = null;
   ngOnInit(): void {
     this.fetchBmiData()
 }
-
-ngDoCheck(): void {
-  console.log(this.check);
-
-  if(this.check){
-    this.fetchBmiData()
-  }
-}
 fetchBmiData(): void {
-  this.check = false
   this.service.historyBmi().subscribe(response => {
     this.data = response.data
-    console.log(this.data);
-
     this.cdr.detectChanges();
-
   })
 }
 }
